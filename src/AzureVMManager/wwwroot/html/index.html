@@ -1,0 +1,23 @@
+﻿<div ng-controller="vmManagerController">
+    <span ng-show="!vmLoaded" >Loading the VMs</span>
+    <table class="table table-striped table-bordered" ng-show="vmLoaded">
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>User</td>
+                <td>State</td>
+                <td>OS</td>
+                <td>Memory In MB</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="vm in VMs">
+                <td>{{vm.name}}</td>
+                <td>{{vm.adminUser}}</td>
+                <td>{{vm.state}}</td>
+                <td>{{vm.osType}}</td>
+                <td>{{vm.size.memoryInMB}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
